@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas HTML5</title>
+</head>
+<body>
+<h2>cuadrado</h2>
+	<canvas id="cuadrado"></canvas>
+<h2>rectangulo</h2>
+	<canvas id="rectangulo"></canvas>
+<h2>triangulo</h2>
+	<canvas id="triangulo"></canvas>
+<h2>circulo</h2>
+	<canvas id="circulo"></canvas>
+<h2>corazon</h2>
+	<canvas id="corazon"></canvas>
+<h2>texto</h2>
+	<canvas id="texto"></canvas>
+
+
+
+<script>	
+	 var	canvas			=	document.getElementById('cuadrado');	
+	 var	ctx						=	canvas.getContext('2d');	
+	 ctx.fillStyle='#000';	
+	 ctx.fillRect(0,0,100,100);	
+	
+	 var	canvas			=	document.getElementById('rectangulo');	
+	 var	ctx						=	canvas.getContext('2d');	
+	 ctx.fillStyle='#000';	
+	 ctx.fillRect(0,0,200,100);	
+
+	 var	canvas			=	document.getElementById('corazon');	
+	 var	ctx						=	canvas.getContext('2d');
+	 ctx.fillStyle='#000';
+	 ctx.beginPath();
+    ctx.moveTo(75,40);
+    ctx.bezierCurveTo(75,37,70,25,50,25);
+    ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+    ctx.bezierCurveTo(20,80,40,102,75,120);
+    ctx.bezierCurveTo(110,102,130,80,130,62.5);
+    ctx.bezierCurveTo(130,62.5,130,25,100,25);
+    ctx.bezierCurveTo(85,25,75,37,75,40);
+    ctx.fill();
+
+     var	canvas			=	document.getElementById('texto');	
+	 var	ctx						=	canvas.getContext('2d');
+	 ctx.fillStyle='#000';
+	 ctx.font="100px tahoma";	
+	 ctx.fillText("ADSI", 20, 80);
+     ctx.stroke();
+
+     var	canvas			=	document.getElementById('circulo');	
+	 var	ctx						=	canvas.getContext('2d');
+	 ctx.fillStyle='#000';
+
+   ctx.beginPath();
+   ctx.arc(100,100,20,0,(Math.PI/180)*360,false);
+   ctx.fillStyle="white";
+   ctx.fill();
+   ctx.lineWidth=5;
+   ctx.strokeStyle="#4388cc";
+   ctx.stroke();
+
+
+	 
+
+</script>
+
+</body>
+</html>
