@@ -1,0 +1,17 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Document
+	body
+		h1 condicionales
+		- var autorizacion = false
+		article
+			if autorizacion
+				h3 autorizado
+				img(src="imgs/success.png")
+			else
+				h3 no autorizado
+				ing(src="imgs/fail.png")
+
+	
