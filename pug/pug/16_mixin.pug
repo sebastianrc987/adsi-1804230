@@ -1,0 +1,14 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title reutilizar codigo
+	body
+		h1 reutilizar codigo
+		mixin mascota(nombre)
+			li.mascota= nombre
+		ul
+			+mascota("firulais")
+			+mascota("misifu")
+			+mascota("rambo elias")
+	

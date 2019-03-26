@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>selectores basicos CSS</title>
+	<style>
+		/*universal*/
+		*{
+			border: 1px solid purple;
+		}
+		/*etiqueta*/
+		li{
+			background-color: teal;
+			margin: 4px;
+		}
+		/*descendente*/
+		ol li {
+			border-bottom: 2px solid red;
+		}
+		/*clase*/
+		.menu {
+			border: 4px dotted gray
+		}
+		/*identificacion*/
+		#opt1 {
+			background-color: orange;
+		}
+		/*combinado*/
+		ol.menu li#opt2 {
+			background-color: yellow;
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<h1>selectores basicos CSS</h1>
+	<hr>
+	<ol class="menu">
+		<li id="opt1">universal(*)</li>
+		<li id="opt2">etiqueta (p)</li>
+		<li>descendente (ol li)</li>
+		<li>clase (.)</li>
+		<li>ID (#)</li>
+		<li>combinado (ol.menu li#opt1)</li>
+	</ol>
+</body>
+</html>
