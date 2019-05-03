@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>texto (espaciado: letras y palabras)</title>
+	<style>
+		article {
+			border: 2px solid #aaa;
+			display: inline-block;
+			padding: 5px;
+			vertical-align: top;
+			width: 250px;
+		}
+		article.el {
+			letter-spacing: 0.5em;
+		}
+		article.ep {
+			word-spacing: 2em;
+		}
+	</style>
+</head>
+<body>
+	<h1>texto (espaciado: letras y palabras)</h1>
+	<h3>letras</h3>
+	<article>
+		<h4>espaciado de letras: normal</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in temporibus assumenda consequuntur itaque dolorem, vel sapiente laboriosam similique nisi. Ipsam nam officiis suscipit odio accusantium tempora blanditiis dignissimos corporis.
+		</p>
+	</article>
+
+	<article class="el">
+		<h4>espaciado de letras:2em</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in temporibus assumenda consequuntur itaque dolorem, vel sapiente laboriosam similique nisi. Ipsam nam officiis suscipit odio accusantium tempora blanditiis dignissimos corporis.
+		</p>
+	</article>
+	<!-- -->
+	<h3>palabras</h3>
+	<article>
+		<h4>espaciado de palabras: normal</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in temporibus assumenda consequuntur itaque dolorem, vel sapiente laboriosam similique nisi. Ipsam nam officiis suscipit odio accusantium tempora blanditiis dignissimos corporis.
+		</p>
+	</article>
+
+	<article class="ep">
+		<h4>espaciado de palabras:2em</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in temporibus assumenda consequuntur itaque dolorem, vel sapiente laboriosam similique nisi. Ipsam nam officiis suscipit odio accusantium tempora blanditiis dignissimos corporis.
+		</p>
+	</article>
+</body>
+</html>

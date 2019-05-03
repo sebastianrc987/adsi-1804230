@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>contenido sobrante (overFlow)</title>
+	<style>
+		section.caja {
+			border:2px solid black;
+			height: 200px;
+			padding: 4px;
+			display:inline-block;
+			vertical-align: top;
+			width: 150px;
+
+		}
+		section.caja h4 {
+			background-color: silver;
+			margin: 0px;
+			padding:10px;
+		}
+		section.caja2{
+			overflow:hidden;
+		}
+		section.caja3{
+			overflow:scroll;
+		}
+	</style>
+</head>
+<body>
+	<h1>contenido sobrante (overFlow)</h1>
+	<section class="caja caja1">
+		<h4>overFlow: visible</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et est facere quibusdam! Optio voluptates eveniet natus excepturi dolores. Facere ratione itaque commodi numquam autem eaque explicabo et dignissimos, modi a!
+		</p>
+	</section>
+	<!-- -->
+	<section class="caja caja2">
+		<h4>overFlow: hidden</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et est facere quibusdam! Optio voluptates eveniet natus excepturi dolores. Facere ratione itaque commodi numquam autem eaque explicabo et dignissimos, modi a!
+		</p>
+	</section>
+	<!-- -->
+	<section class="caja caja3">
+		<h4>overFlow: scroll</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et est facere quibusdam! Optio voluptates eveniet natus excepturi dolores. Facere ratione itaque commodi numquam autem eaque explicabo et dignissimos, modi a!
+		</p>
+	</section>
+</body>
+</html>
