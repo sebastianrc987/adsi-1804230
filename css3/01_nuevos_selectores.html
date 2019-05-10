@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NUEVOS SELECTORES</title>
+	<style>
+		ul {
+			width: 400px;
+		}
+		ul li {
+			padding: 10px;
+			margin: 2px;
+		}
+		ul.nth li:nth-child(3) {
+			background-color: purple;
+			color:#fff;
+		}
+		ul.nth li:nth-last-child(2) {
+			background-color: lime;
+			color:#fff;
+		}
+		ul.child li:first-child,
+		ul.child li:last-child {
+			background-color: pink;
+			color:#fff;
+		}
+		article{
+			padding: 20px;
+			width: 400px;
+		}
+		#inicio:target,
+		#portafolio:target,
+		#contacto:target {
+			background-color: #5676d2;
+			color: #fff;
+		}
+		article.amarillo p::selection {
+			background-color: yellow;
+		}
+		article.azul p::selection {
+			background-color: blue;
+		}
+		article.rojo p::selection {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>nuevos selectores</h1>
+	<h3>:nth-child(n) | :nth-last-child(n)</h3>
+	<ul class="nth">
+		<li>Html</li>
+		<li>Css</li>
+		<li>Javascript</li>
+		<li>Python</li>
+		<li>Sql</li>
+	</ul>
+
+
+	<h3>:first-child | :last-child</h3>
+	<ul class="child">
+		<li>C++</li>
+		<li>C#</li>
+		<li>JaVA</li>
+		<li>Ruby</li>
+		<li>object pascal</li>
+	</ul>
+
+	<h3>target</h3>
+	<ul class="target">
+		<li><a href="#inicio">inicio</a></li>
+		<li><a href="#portafolio">portafolio</a></li>
+		<li><a href="#contacto">contacto</a></li>
+	</ul>
+	<article id="inicio">
+		<h2>INICIO</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quam dolorum, velit expedita magni. Libero eaque molestiae, iusto dignissimos accusamus debitis dolorem eligendi obcaecati magnam facilis quaerat magni, eveniet ipsum.
+		</p>
+	</article>
+	<article id="portafolio">
+		<h2>PORTAFOLIO</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quam dolorum, velit expedita magni. Libero eaque molestiae, iusto dignissimos accusamus debitis dolorem eligendi obcaecati magnam facilis quaerat magni, eveniet ipsum.
+		</p>
+	</article>
+	<article id="contacto">
+		<h2>CONTACTO</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quam dolorum, velit expedita magni. Libero eaque molestiae, iusto dignissimos accusamus debitis dolorem eligendi obcaecati magnam facilis quaerat magni, eveniet ipsum.
+		</p>
+	</article>
+
+	<h3>:section</h3>
+	<article class="amarillo">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe error a neque dicta odio asperiores culpa commodi, ab pariatur quis! Voluptas ipsum, sapiente aliquam, quaerat numquam ratione ad animi autem soluta. Nesciunt cumque fugit numquam, repellat dolorem incidunt tempora sint, architecto aspernatur distinctio quis nulla dolores, praesentium veniam impedit saepe debitis dignissimos! Eligendi corrupti atque culpa, praesentium enim magnam nemo repudiandae ipsam. Vitae, ad, molestiae! Fuga eum est ex quo necessitatibus repellendus. Facere dignissimos totam eveniet doloribus enim autem deserunt quod eum aliquam tenetur aut cupiditate labore animi neque recusandae numquam eaque a, facilis asperiores ad est! Maiores, vitae, placeat!
+		</p>
+	</article>
+	<article class="azul">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe error a neque dicta odio asperiores culpa commodi, ab pariatur quis! Voluptas ipsum, sapiente aliquam, quaerat numquam ratione ad animi autem soluta. Nesciunt cumque fugit numquam, repellat dolorem incidunt tempora sint, architecto aspernatur distinctio quis nulla dolores, praesentium veniam impedit saepe debitis dignissimos! Eligendi corrupti atque culpa, praesentium enim magnam nemo repudiandae ipsam. Vitae, ad, molestiae! Fuga eum est ex quo necessitatibus repellendus. Facere dignissimos totam eveniet doloribus enim autem deserunt quod eum aliquam tenetur aut cupiditate labore animi neque recusandae numquam eaque a, facilis asperiores ad est! Maiores, vitae, placeat!
+		</p>
+	</article>
+	<article class="rojo">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe error a neque dicta odio asperiores culpa commodi, ab pariatur quis! Voluptas ipsum, sapiente aliquam, quaerat numquam ratione ad animi autem soluta. Nesciunt cumque fugit numquam, repellat dolorem incidunt tempora sint, architecto aspernatur distinctio quis nulla dolores, praesentium veniam impedit saepe debitis dignissimos! Eligendi corrupti atque culpa, praesentium enim magnam nemo repudiandae ipsam. Vitae, ad, molestiae! Fuga eum est ex quo necessitatibus repellendus. Facere dignissimos totam eveniet doloribus enim autem deserunt quod eum aliquam tenetur aut cupiditate labore animi neque recusandae numquam eaque a, facilis asperiores ad est! Maiores, vitae, placeat!
+		</p>
+	</article>
+</body>
+</html>
