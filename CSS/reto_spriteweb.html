@@ -4,45 +4,169 @@
 	<meta charset="UTF-8">
 	<title>reto sprite</title>
 	<style>
-		ul li.caja1 {
-			background: url(imgs/spriteweb.png) 325px -110px / 300%;
-			height: 480px;
-			margin: 0px auto;
-			width: 700px;
-			
-			
+		h1 {
+			text-align: center;
+			color:green;
+			text-decoration: underline; 
 		}
-		body {
+		ul.mayor {
 			background-color: #0B610B;
-		}
-		.mayor {
-			list-style: 	none;
-			padding-top: 5px;
-			padding-left: 5px;
+			list-style: none;
+			padding: 5px;
 			display:inline-flex;
 			border: 2px solid white;
 			margin: 0px;
 			width: 1855px;
-			height: 500px;
-		}
-		.mayor li {
+			}
+		ul.mayor li {
 			height: 30px;
 			padding: 5px;
 			width: 200px;
 			color: white;
 			border: 2px solid white;
+			color:white;
+			text-align: center;
 		}
-		
+		ul.mayor li.menor1 {
+
+		}
+		ul.contenido {
+			
+			width: 1860px;
+			padding: 3px;
+			display:inline-flex;
+			list-style: none;
+			background-color: green;
+		}
+		ul.contenido li {
+			border: 1px solid white;
+			width: 145px;
+			height: 190px;
+			padding:5px;
+			border-style: dotted;
+			border-color: white;
+		}
+		ul.contenido li.caja2 {
+			background-color: green;
+			width: 920px;
+			background: url(imgs/spriteweb.png)1000px 1250px /2600px;
+		}
+		ul.padre {
+			padding: 2px;
+			width: 1860px;
+			padding: 3px;
+			display:inline-flex;
+			list-style: none;
+			background-color: green;
+		}
+		ul.padre li {
+			border: 1px solid white;
+			width: 145px;
+			height: 190px;
+			padding:5px;
+			border-style: dotted;
+			border-color: white;
+		}
+		ul.padre li.pequeno2 {
+			width: 920px;
+			background: url(imgs/spriteweb.png)1000px 1000px /2600px;
+		}
+		ul.abuelo {
+			padding: 2px;
+			width: 1860px;
+			padding: 3px;
+			display:inline-flex;
+			list-style: none;
+			background-color: green;
+		}
+		ul.abuelo li {
+			border: 1px solid white;
+			width: 145px;
+			height: 190px;
+			padding:5px;
+			border-style: dotted;
+			border-color: white;
+		}
+		ul.abuelo li.nieto2 {
+			width: 920px;
+			background: url(imgs/spriteweb.png)1000px 800px /2600px;
+		}
+		article.articulos1 {
+			width: 300px;
+			height: 194px;
+			
+			background: url(imgs/spriteweb.png)-20px 480px / 1000px;
+		}
+		article.articulos2 {
+			width: 230px;
+			height: 194px;
+			
+			background: url(imgs/spriteweb.png)770px -20px / 1100px;
+		}
+		article.articulos3 {
+			width: 300px;
+			height: 194px;
+			
+			background: url(imgs/spriteweb.png)-20px 730px / 1000px;
+		}
+		article.articulos4 {
+			width: 300px;
+			height: 194px;
+			
+			background: url(imgs/spriteweb.png)-650px -550px / 1000px;
+		}
+		article.articulos5 {
+			width: 300px;
+			height: 194px;
+			
+			background: url(imgs/spriteweb.png)-300px -660px / 1100px;
+		}
+		article.articulos6 {
+			width: 300px;
+			height: 194px;
+			
+			background: url(imgs/spriteweb.png)-20px 480px / 1000px;
+		}
+
+
 	</style>
 </head>
 <body>
 	<h1>reto sprite</h1>
 	<ul class="mayor">
-		<li class="menor1"><a href="">INICIO</a></li>
-		<li class="menor2"><a href="">PRODUCTOS</a></li>
-		<li class="menor3"><a href="">CONTACTOS</a></li>
-		<li class="menor4"><a href="">AYUDA</a></li>
-		<li class="caja1"></li>
+		<li class="menor1">INICIO</li>
+
+		<li class="menor2">PRODUCTOS</li>
+		<li class="menor3">CONTACTOS</li>
+		<li class="menor4">AYUDA</li>
+	</ul>
+	<ul class="contenido">
+		<li class="caja1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quod laborum accusantium totam rem neque?</li>
+			<article class="articulos3"></article>
+
+
+		<li class="caja2"></li>
+		<li class="caja3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, nesciunt voluptatibus eaque nemo quidem voluptates voluptatum!</li>
+			<article class="articulos4"></article>
+
+
+	</ul>
+	<ul class="padre">
+		<li class="pequeno1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illum quia reprehenderit, commodi voluptatem deleniti.</li>
+			<article class="articulos5"></article>
+
+
+		<li class="pequeno2"></li>
+		<li class="pequeno3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus eaque, maxime aperiam cumque at tenetur.</li>
+			<article class="articulos6"></article>
+
+	</ul>
+	<ul class="abuelo">
+		<li class="nieto1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore et optio, neque vero doloribus ipsum nisi reiciendis non. Ipsam ullam rerum iusto obcaecati officia earum numquam architecto veritatis nostrum.</li>
+			<article class="articulos1"></article>
+		<li class="nieto2"></li>
+		<li class="nieto3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore et optio, neque vero doloribus ipsum nisi reiciendis non. Ipsam ullam rerum iusto obcaecati officia earum numquam architecto veritatis nostrum.</li>
+			<article class="articulos2"></article>
 	</ul>
 
 	

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animaciones</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		section.landscape {
+			background: url(imgs/paisaje.jpg)no-repeat center;
+			background-size: cover;
+			height: 100vh;
+		}
+		div.path {
+			
+			height: 60px;
+			position: relative;
+			width: 120px;
+
+			animation: animPath 10s infinite;
+		}
+		div.path div.aircow {
+			background: url(imgs/vaca.png)no-repeat center;
+			background-size: cover;
+			height: 60px;
+			position: relative;
+			animation: animAirCow 1s infinite;
+		}
+		@keyframes animAirCow {
+			0%	{top:0px;}
+			25%	{top:-4px;}
+			50%	{top:0px;}
+			75%	{top:4px;}
+			100%{top:0px;}
+		}
+		@keyframes animPath {
+			0% {
+				left:0px;
+				top: 50px;
+				transform: scale(1) rotateY(0deg);
+			}
+			50% {
+				left:1700px;
+				top: 300px;
+				transform: scale(1) rotateY(0deg);
+			}
+			75% {
+				left:1700px;
+				top: 400px;
+				transform: scale(10) rotateY(180deg);
+			}
+			100% {
+				left:-600px;
+				top: -800;
+				transform: scale(1) rotateY(180deg);
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<h1>animaciones</h1>
+	<section class="landscape">
+		<div class="path">
+			<div class="aircow">
+				
+			</div>
+		</div>
+	</section>
+</body>
+</html>
