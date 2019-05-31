@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>reto quaries</title>
 	<style>
+		*{
+			transition: all 0.5s;
+		}
 		body {
 			background: url(imgs/fondococa.jpg)no-repeat center;
 			background-size: cover;
@@ -36,13 +40,30 @@
 			background: url(imgs/cocabox2.jpg);
 		}
 		section.padre div.box3 {
-			background: url(imgs/cocabox3.jpg);
+			background: url(imgs/cocabox3.jpg)no-repeat center;
 			background-size: contain;
 		}
 		section.padre div.box4 {
 			background: url(imgs/cocabox4.png);
 			background-size: cover;
 		}
+		section.padre div.box1:hover {
+			transition: all 1s;
+			transform: scale(0.9);
+		}
+		section.padre div.box2:hover {
+			transition: all 1s;
+			transform: scale(0.9);
+		}
+		section.padre div.box3:hover {
+			transition: all 1s;
+			transform: scale(0.9);
+		}
+		section.padre div.box4:hover {
+			transition: all 1s;
+			transform: scale(0.9);
+		}
+
 		section.padre div p {
 			bottom: 0px;
 			background: rgb(0, 0, 0, .6);
@@ -53,9 +74,16 @@
 		section.padre2 div.box1 {
 			border: 1px solid black;
 			display: inline-block;
-			
 			margin: 10px;
 			width: 1280px;
+		}
+		section.padre2 div.box1:hover {
+			transition: all 1s;
+			transform: scale(0.9);
+		}
+		section.padre2 div.box2:hover {
+			transition: all 1s;
+			transform: scale(0.9);
 		}
 		section.padre2 div.box1 div.cajita1 {
 			background: url(imgs/cajita1.jpg)no-repeat left;
@@ -67,9 +95,16 @@
 		}
 		section.padre2 div.box2 {
 			border: 1px solid black;
-			
 			margin: 10px;
 			width: 1280px;
+		}
+		section.padre2 div.box1:hover {
+			transition: all 1s;
+			transform: scale(0.9);
+		}
+		section.padre2 div.box2:hover {
+			transition: all 1s;
+			transform: scale(0.9);
 		}
 		section.padre2 div.box2 div.cajita2 {
 			background: url(imgs/cajita2.jpg)no-repeat left;
@@ -88,7 +123,6 @@
 			width: 1040px;
 			margin: 10px 0px;
 		}
-		
 		section.padre2 div.box2 div {
 			display: inline-block;
 		}
@@ -110,9 +144,83 @@
 			text-align: center;
 			margin: 10px 0px 10px 0px;
 		}
+		@media (max-width: 1024px) {
+			section.padre {
+				width: 900px;
+			}
+			section.padre div {
+				width: 400px;
+			}
+			header div.logo {
+				background: url(Imgs/cocatablet.jpg) no-repeat center;
+				height: 200px;
+				width: 850px;
+			}
+			main section.padre2 div.box1 {
+				width: 63.5%;
+			}
 
-		
+			main section.padre2 div.box1 p {
+				height: 390px;
+				margin: 10px;
+				width: 68%;
+			}
+			main section.padre2 div.box2 {
+				width: 63.5%;
+			}
 
+			main section.padre2 div.box2 p {
+				height: 390px;
+				margin: 10px;
+				width: 68%;
+			}
+
+		@media (max-width: 720px) {
+			header div.logo {
+			background: url(imgs/cocamobil.jpg) no-repeat center;
+			height: 100px;
+			width: 400px;
+
+			}
+			section.padre {
+				width: 420px;
+			}
+			section.padre2 div {
+				height: 340px;
+				width: 340px;
+			}
+			section.padre2 {
+				width: 420px;
+			}
+			main section.padre2 div.box1 {
+				height: 900px;
+				width: 95%;
+			}
+			main section.padre2 div.box1 div.cajita1 {
+				height: 350px;
+				width: 95%;
+			}
+			main section.padre2 div.box1 p {
+				height: 510px;
+				margin: 10px;
+				width: 95%;
+			}
+			/*--------------------------*/
+			main section.padre2 div.box2 {
+				height: 900px;
+				width: 95%;
+			}
+			main section.padre2 div.box2 div.cajita2 {
+				height: 350px;
+				width: 95%;
+			}
+			main section.padre2 div.box2 p {
+
+				height: 510px;
+				margin: 10px;
+				width: 95%;
+			}
+		}
 	</style>
 </head>
 <body>
