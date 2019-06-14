@@ -1,0 +1,102 @@
+body {
+	background-color: #003145;
+	font: 16px arial;
+	h1 {
+		font-size: 5em;
+		background: linear-gradiet(to top, #1eff00, #003145);
+		-webkit-background-clip:text;
+		-webkit-text-fill-color:transparent;
+		margin: 40px auto;
+		text-align: center;
+		width: 900px;
+		text-transform: uppercase;
+	}
+	a:link.btn,
+	a:visited.btn {
+		border: 1px solid ##1eff00;
+		border-radius: 4px;
+		color:##1eff00;
+		display: block;
+		padding: 12px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all 0.5s ease;
+		width: 120px;
+		margin: 10px auto;
+
+		&:hover {
+			transform: translateY(-10px) scale(1.1);
+			background-color: rgba(0,0,0,.4);
+		}
+
+	}
+}
+section.modal {
+	background-color:rgba(0,0,0,.8);
+	position: fixed;
+	bottom: 0;
+	opacity: 0;
+	pointer-events: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	transition: all 0.5 ease;
+	transform: scale(.8);
+	z-index:9999;
+
+	&:target {
+		opacity:1;
+		pointer-events: auto;
+		transform: scale(1);
+	}
+	> div {
+		background-color:rgba(200,255,255,.8);
+		border-radius: 4px;
+		box-shadow: 0px 0px 12px rgba(0,0,0,.6);
+		color: rgba(0, 0, 0,.6);
+		padding: 20px;
+		position:absolute;
+		top: 40%;
+		left: 50%;
+		transform: translateY(-45%);
+		transform: translateX(-50%);
+		width: 400px;
+		//--------------------------------
+		//condicionales-------------------
+		$age:29;
+		@if $age >=18 {
+			color: green;
+
+			h2 {
+				position: relative;
+				//----------------
+
+				&:after {
+					content: "si puede votar";
+				}
+			}
+			@else {
+				h2 {
+					color: red;
+					position: relative;
+
+					&:after {
+						content: "no puede votar";
+					}
+				}
+			}
+			a:link,
+			a:visited {
+				font-size: 2em;
+				display: block;
+				text-decoration:none;
+				color: crimson;
+				position: absolute;
+				top: 0px;
+				right: 10px;
+			}
+		}
+	}
+}
+

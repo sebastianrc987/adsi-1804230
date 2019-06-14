@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>variables y tipos de datos</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<main>
+		<h1>variables y tipo de datos</h1>
+		<h3>tipo cadena&rarr; <span id="tcadena"></span></h3>
+		<h3>tipo numeros&rarr; <span id="tnumero"></span></h3>
+		<h3>tipo booleano&rarr; <span id="tbooleano"></span></h3>
+		<h3>tipo nulo&rarr; <span id="tnulo"></span></h3>
+		<h3>tipo arreglo&rarr; <span id="tarreglo"></span></h3>
+		<h3>tipo objeto&rarr; <span id="tobjeto"></span></h3>
+
+
+	</main>
+	<script>
+		//variables
+		var tc = document.getElementById('tcadena');
+		var tn = document.getElementById('tnumero');
+		var tb = document.getElementById('tbooleano');
+		var tu = document.getElementById('tnulo');
+		var ta = document.getElementById('tarrego');
+		var to = document.getElementById('tobjeto');
+
+
+
+		//tipo cadena ---------------
+		var cadena1 = "adsi";
+		var cadena2 = '1804230';
+		var cadenar = cadena1 + " " + cadena2;
+		tc.innerHTML = cadenar;
+		//tipo numero-----------------------
+		var num1 = 14;
+		var num2 = 6.456;
+		tn.innerHTML = num1 +num2;
+		//tipo booleano
+		var cond = true;
+		cond = (4===6);
+		tb.innerHTML = cond;
+		//tipo null/indefinido---------------
+		var color = null;
+		var edad = undefined;
+		tu.innerHTML = color + "&" + edad;
+		//tipo arreglo-------------------------
+		var frutas = new Array('manzana', 'pera', 'guayaba');
+		frutas[3] = "naranja";
+		ta.innerHTML = frutas;
+		//tipo objeto----------
+		var aprendiz = {
+			nombre: "geremias",
+			centro: "CPIC",
+			programa: "ADSI",
+			edad: 45
+		};
+		to.innerHTML = "programa: " + aprendiz.programa;
+
+	</script>
+	
+</body>
+</html>

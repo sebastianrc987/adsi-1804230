@@ -1,0 +1,9 @@
+html {
+  width: 1000px;
+  display: inline-block; }
+html head title {
+  text-align: center;
+  color: purple; }
+html body header {
+  border: 1px solid red;
+  width: 200px; }
