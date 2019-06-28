@@ -1,0 +1,77 @@
+body {
+	font:16px arial;
+	color: #333;
+}
+h1 {
+	text-align: center;
+}
+main.table {
+	background: url(../imgs/base.png);
+	height: 426px;
+	margin: 20px auto;
+	position: relative;
+	width: 288px;
+}
+main.table section.attributes {
+	border: 2px solid red;
+	height: 330px;
+	left: 180;
+	position: absolute;
+	top:40px;
+	width: 180px;
+	margin-left: 100px;
+}
+section.attributes ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+}
+section.attributes ul li{
+	color: #422f25;
+	font-size: 1.1em;
+	padding: 18px 0px;
+	text-shadow: 0px 0px 4px #fff;
+}
+main.table section.methods {
+	bottom: 4px;
+	height: 96px;
+	left: 4px;
+	position: absolute;
+	width: 466px;
+}
+section.methods button:first-of-type {
+	margin-left: 16px;
+}
+section.methods button:last-of-type {
+	margin-right: 0px;
+}
+section.methods button:last-of-type {
+
+}
+
+
+section.methods button {
+	border: none;
+	border-radius: 100px
+	height: 64px;
+	margin: 12px 14px ;
+	width: 64px;
+}
+
+/*--------------------------BOTONES--------------------*/
+section.methods button#btnOn {
+	background: transparent url(../imgs/btn-play.png) no-repeat center;
+}
+section.methods button#btnOff {
+	background: transparent url(../imgs/btn-off.png) no-repeat center;
+}
+section.methods button#btnStop {
+	background: transparent url(../imgs/btn-stop.png) no-repeat center;
+}
+section.methods button#btnForward {
+	background: transparent url(../imgs/btn-forward.png) no-repeat center;
+}
+section.methods button#btnBackward {
+	background: transparent url(../imgs/btn-backward.png) no-repeat center;
+}
+

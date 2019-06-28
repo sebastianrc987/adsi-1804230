@@ -1,9 +1,6 @@
-html {
-  width: 1000px;
-  display: inline-block; }
-html head title {
-  text-align: center;
-  color: purple; }
-html body header {
+header {
+  margin: 20px auto;
+  padding: 20px;
+  width: 742px;
   border: 1px solid red;
-  width: 200px; }
+}
