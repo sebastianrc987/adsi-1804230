@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reto condicionales</title>
+	<link rel="stylesheet" href="css/gowar.css">
+</head>
+<body>
+	<main class="gowar">
+		<input type="number" id="age">
+		<figure id="female" ></figure>
+		<figure id="male" ></figure>
+		<button id="calc"></button>
+	</main>
+	<script>
+		//Variables
+		var female = document.getElementById('female');
+		var male   = document.getElementById('male');
+		var calc   = document.getElementById('calc');
+		var gender = null;
+		var edad = 18;
+		//eventos
+		female.onclick = function() {
+			this.classList.add('active');
+			male.classList.remove('active');
+			gender = 'female';
+		}
+		male.onclick = function() {
+			this.classList.add('active');
+			female.classList.remove('active');
+			gender = 'male';
+		}
+		calc.onclick = function() {
+			var age = document.getElementById('age').value;
+			if(age.length > 0 && gender != null) {
+				if(gender == "male") {
+					if(age >= 18 && age <= 60) {
+						alert("ES APTO PARA IR A LA GUERRA");
+					} else if (age < 18 ) {
+						alert("ESTA DEMACIADO JOVEN, NO PUEDE IR A LA GUERRA");
+					} else if (age > 60 ) {
+						alert("ESTA DEMACIADO VIEJO, NO PUEDE IR A LA GUERRA");
+					}
+				} else {
+					alert("NINGUNA MUJER PUEDE IR A LA GUERRA")
+				}
+			} else {
+				alert('PARA PODER CALCULAR PRIMERO DEBE INGRESAR SU EDAD Y SELECCIONAR UN GENERO')
+			}
+		}
+	</script>
+</body>
+</html>

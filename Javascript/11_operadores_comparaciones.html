@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>operadores comparacion</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/tables.css">
+</head>
+<body>
+	<main>
+		<h1>operadores comparacion</h1>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4">
+						<input  id="vx" type="number" placeholder="Valor de X">
+					</th>
+				</tr>
+				<tr>
+					<th>operador</th>
+					<th>descripcion</th>
+					<th>comparacion</th>
+					<th>resultado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>==</td>
+					<td>es igual a</td>
+					<td>x==8</td>
+					<td id="vb1"></td>
+				</tr>
+				<tr>
+					<td>===</td>
+					<td>es exactamente igual a (valor tipo)</td>
+					<td>
+				<tr>
+					<td>!=</td>
+					<td>no es igual</td>
+					<td>x!=8</td>
+					<td id="vb3"></td>
+				</tr>
+				<tr>
+					<td>!==</td>
+					<td>no es igual (valor y tipo)</td>
+					<td>x!==5</td>
+					<td id="vb4"></td>
+				</tr>
+				<tr>
+					<td>></td>
+					<td>es mayor que</td>
+					<td>x>8</td>
+					<td id="vb5"></td>
+				</tr>
+				<tr>
+					<td><</td>
+					<td>es menor que</td>
+					<td>x<8</td>
+					<td id="vb6"></td>
+				</tr>
+				<tr>
+					<td>>=</td>
+					<td>es mayor o igua que</td>
+					<td>x>=8</td>
+					<td id="vb7"></td>
+				</tr>
+				<tr>
+					<td><=</td>
+					<td>es menor o igual que</td>
+					<td>x<=8</td>
+					<td id="vb8"></td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+	<script>
+		//variables
+		var vb = document.getElementById('vy');
+		var vb1 = document.getElementById('vb1');
+		var vb2 = document.getElementById('vb2');
+		var vb3 = document.getElementById('vb3');
+		var vb4 = document.getElementById('vb4');
+		var vb5 = document.getElementById('vb5');
+		var vb6 = document.getElementById('vb6');
+		var vb7 = document.getElementById('vb7');
+		var vb8 = document.getElementById('vb8');
+		var vb9 = document.getElementById('vb9');
+
+
+
+
+
+		//evento
+		vy.onkeyup = function() {
+			valy = this.value;
+			if(this.value.length > 0 && this.value.length < 12) {
+				//-------------------------------
+				vx1.innerHTML = parseInt(valy) + 2;
+				vy1.innerHTML = valy;
+				//-------------------------------
+				vx2.innerHTML = parseInt(valy) - 2;
+				vy2.innerHTML = valy;
+				//-------------------------------
+				vx3.innerHTML = parseInt(valy) * 2;
+				vy3.innerHTML = valy;
+				//-------------------------------
+				vx4.innerHTML = parseInt(valy) / 2;
+				vy4.innerHTML = valy;
+				//-------------------------------
+				vx5.innerHTML = parseInt(valy) % 2;
+				vy5.innerHTML = valy;
+				//-------------------------------
+				vx6.innerHTML = ++valy;
+				vy6.innerHTML = valy;
+				//-------------------------------
+				valy = this.value;
+				vx7.innerHTML = valy++;
+				vy7.innerHTML = valy;
+				//-------------------------------
+				valy = this.value;
+				vx8.innerHTML = --valy;
+				vy8.innerHTML = valy;
+				//-------------------------------
+				valy = this.value;
+				vx9.innerHTML = valy--;
+				vy9.innerHTML = valy;
+			}
+		}
+	</script>
+</body>
+</html>

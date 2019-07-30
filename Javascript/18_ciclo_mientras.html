@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	cilos while</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		ul {
+			list-style: none;
+			padding: 0px;
+			margin: 0px auto;
+			width: 40px;
+		}
+		li {
+			border: 1px solid gray;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>	cilos while</h1>
+		<p>imprimir los multiplos dse 7 desde el uno hasta el cien</p>
+		<ul id="numbers"></ul>
+	</main>
+	<script>
+		//variables
+		var numbers = document.getElementById('numbers');
+		var i = 1;
+
+		while(i<=100) {
+			if(i%7 == 0) {
+				numbers.innerHTML += "<li>"+i+"</i>";
+			}
+			i++;
+		}
+	</script>
+</body>
+</html>
