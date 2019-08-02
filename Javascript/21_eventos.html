@@ -6,27 +6,69 @@
 	<link rel="stylesheet" href="css/styles.css">
 
 </head>
-<body onload="bienvenida();">
+<body onload="bienvenida();" id="bd">
 	<main>
 		<h1>eventos</h1>
 		<h4>DobleClick</h4>
 		<button id="btnDC"># de doble click = 0</button>
 		<h4>precinar tecla</h4>
+
 		<input type="text" id="iname" placeholder="Ingresar Nombre Completo">
 		<output id="pname" onkey></output>
+
+		<h4>cambiar valor</h4>
+		<select id="bgcolor">
+			<option value="">seleccionar color de fondo...</option>
+			<option value="1">naranja</option>
+			<option value="2">rosado</option>
+			<option value="3">amarillo</option>
+		</select>
+		<h4>Mouse OVER/OUT</h4>
+		<img src="imgs/rick.jpg" id="imgk" width="480">
 	</main>
 	<script>
 		//variables
-		var btnDC = document.getElementById('btnDC');
-		var iname = document.getElementById('iname');
-		var pname = document.getElementById('pname')
-		var cntDC = 0;
+		var btnDC 	= document.getElementById('btnDC');
+		var iname 	= document.getElementById('iname');
+		var pname 	= document.getElementById('pname')
+		var bd 	  	= document.getElementById('bd');
+		var wbd   	= document.getElementById('wbd');
+		var bgcolor = document.getElementById('bgcolor');
+		var imgk = document.getElementById('imgk');
+		var cntDC 	= 0;
 		//eventos
 		btnDC.ondblclick = function() {
 			this.innerHTML = "# de doble clicks = "+cntDC++;
 		}
 		iname.onkeydown = function() {
-			this.innerHTML = "# de dobles clicks"
+			pname.value = this.value;
+		}
+		bd.onresize = function() {
+			wbd.innerHTML = "ancho de ventana: " window.outerWidth+" px";
+		}
+		bgcolor.onchange = function() {
+			if(this.value == '') {
+				bd.style.backgroundColor = "white";
+			}
+			if(this.value == '1') {
+				bd.style.backgroundColor = "orange";
+			}
+			if(this.value == '2') {
+				bd.style.backgroundColor = "pink";
+			}
+			if(this.value == '3') {
+				bd.style.backgroundColor = "yellow";
+			}
+		}
+
+
+
+
+		imgk.onmouseover = function() {
+			this.src = "imgs/rick.jpg";
+		}
+		imgk.onmouseout = function() {
+			this.src = "imgs/rick_and_morty.jpg";
 		}
 		function bienvenida() {
 			alert("Bienvenidos:La pagina a cargado correctamente!!!");

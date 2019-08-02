@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reto (baloto)</title>
+	<style>
+		body {
+			background: url(imgs/baloto/bg_baloto.jpg) no-repeat center;
+			margin: 0px;
+			height: 100vh;
+		}
+		h1 {
+			color:blue;
+			text-align: center;
+			font-family: arial;
+		}
+		img {
+			display: block;
+			margin: 40px auto;
+			width: 250px;
+		}
+		section {
+			margin-left: 490px;
+			margin-top: 250px;
+			height: 200px;
+			width: 980px;
+		}
+		div {
+			display: inline-block;
+			height: 150px;
+			width: 150px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<main>
+		<h1>RETO (BALOTO)</h1>
+		<img src="imgs/baloto/logo_baloto.png" alt="">
+		<section>
+			<div id="b" style="background: url(imgs/baloto/bg_balota1.png)no-repeat center;"></div>
+			<div id="b" style="background: url(imgs/baloto/bg_balota1.png)no-repeat center;"></div>
+			<div id="b" style="background: url(imgs/baloto/bg_balota1.png)no-repeat center;"></div>
+			<div id="b" style="background: url(imgs/baloto/bg_balota1.png)no-repeat center;"></div>
+			<div id="b" style="background: url(imgs/baloto/bg_balota1.png)no-repeat center;"></div>
+			<div id="b" style="background: url(imgs/baloto/bg_balota2.png)no-repeat center;"></div>
+			<button id="random">GIRAR</button>
+
+		</section>
+	</main>
+	<script>
+		//variables
+
+		var random = document.getElementById('random');
+
+
+		//eventos
+
+		random.onclick = function() {
+			this.innerHTML = Math.round(Math.random()*45);
+		}
+	</script>
+</body>
+</html>
