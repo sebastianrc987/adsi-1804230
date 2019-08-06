@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>metodos (frecha)</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<main>
+		<h1>metodos (frecha)</h1>
+		<h4>GET:</h4>
+		<ul id="lget"></ul>
+		<h4>SET</h4>
+		<ul id="lset"></ul>
+
+	</main>
+	<script>
+		//variables
+		var lget = document.getElementById('lget');
+		var lset = document.getElementById('lset');
+
+		var ndate = new Date();
+		var fdate = new Date('2022/12/31 12:22:40');
+
+		//get
+		lget.innerHTML = "<li>Fecha completa: "+ndate+"</li>"
+		lget.innerHTML += "<li>Año: "+ndate.getFullYear()+"</li>"
+		lget.innerHTML += "<li>Mes: "+(ndate.getMonth()+1)+"</li>"
+		lget.innerHTML += "<li>Dia de la semana: "+ndate.getDay()+"</li>"
+		lget.innerHTML += "<li>Dia del mes: "+ndate.getDate()+"</li>"
+
+		//-------------------------------------------------------
+		//set
+
+		fdate.setFullYear(2050);
+		fdate.setMonth(12);
+		fdate.setday(7);
+
+		lset.innerHTML += "<li>Fecha completa: "+fdate+"</li>";
+		lset.innerHTML += "<li>Año: "+fdate.getFullYear()+"</li>";
+		lset.innerHTML += "<li>Mes: "+(fdate.getMonth()+1)+"</li>";
+		lset.innerHTML += "<li>Dia de la semana: "+fdate.setDay()+"</li>";
+		lset.innerHTML += "<li>Dia del mes: "+fdate.getDate()+"</li>";
+
+
+
+	</script>
+</body>
+</html>
