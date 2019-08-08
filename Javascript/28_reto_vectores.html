@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>reto (vectores)</title>
+ 	<style>
+ 		h1 {
+ 			font: 1.4em verdana;
+ 			color: #4e6b64;
+ 			margin-top: 20px;
+ 			text-align: center;
+ 			text-transform: uppercase;
+ 		}
+ 		main.vectors {
+			background: url(imgs/pokemon/btn_fondo.png)no-repeat center;
+			background-size: contain;
+			background-size: contain;
+			height: 480px;
+			margin:20px auto;
+			position: relative;
+			width: 480px;
+ 		}
+ 		ul {
+ 			height: 152px;
+ 			list-style: none;
+ 			margin: 0px;
+ 			padding: 0px;
+ 			position: absolute;
+ 			top:90px;
+ 			left:85px;
+ 			width: 314px;
+ 		}
+ 		ul.pokemons li.pk {
+ 			background-position: center;
+ 			background-repeat: no-repeat;
+ 			background-size: contain;
+ 			border-radius: 30px;
+ 			display: inline-block;
+ 			height: 60px;
+ 			margin: 6px;
+ 			transition: all 0.5s ease-out;
+ 			filter: grayscale(1);
+ 			width: 60px;
+ 		}
+ 		ul.pokemons li.pk1 {background-image: url(imgs/pokemon/pk1.png);}
+ 		ul.pokemons li.pk2 {background-image: url(imgs/pokemon/pk2.png);}
+ 		ul.pokemons li.pk3 {background-image: url(imgs/pokemon/pk3.png);}
+ 		ul.pokemons li.pk4 {background-image: url(imgs/pokemon/pk4.png);}
+ 		ul.pokemons li.pk5 {background-image: url(imgs/pokemon/pk5.png);}
+ 		ul.pokemons li.pk6 {background-image: url(imgs/pokemon/pk6.png);}
+ 		ul.pokemons li.pk7 {background-image: url(imgs/pokemon/pk7.png);}
+ 		ul.pokemons li.pk8 {background-image: url(imgs/pokemon/pk8.png);}
+
+
+ 		ul.pokemons li.pk:hover {
+ 			cursor: pointer;
+ 			filter: grayscale(0);
+ 			transform: scale(1.2);
+
+ 		}
+ 		select#options {
+ 			background: url(imgs/pokemon/seleccione.png)no-repeat center;
+ 			border:none;
+ 			height: 36px;
+ 			position: absolute;
+ 			outline: none;
+ 			text-indent: 20px;
+ 			bottom: 80px;
+ 			left: 40px;
+ 			-webkit-appearance:none;
+ 			width: 400px;
+ 		}
+
+ 		section.btns {
+ 			position: absolute;
+ 			bottom: 20px;
+ 			left: 40px;
+ 		}
+ 		section.btns button {
+ 			background-color: transparent;
+ 			background-position:center;
+ 			background-repeat: no-repeat;
+ 			border:none;
+ 			height: 36px;
+ 			transition: all 0.5s ease-in;
+ 			width: 180px;
+ 		}
+ 		section.btns button#btnAdd {
+ 			background-image: url(imgs/pokemon/adicionar.png);
+ 			margin-right: 30px;
+ 		}
+ 		section.btns button#btnDelete {
+ 			background-image: url(imgs/pokemon/delete.png);
+ 		}
+ 		section.btns button:hover {
+ 			cursor: pointer;
+ 			transform: scale(1);
+ 		}
+
+
+
+		
+ 	</style>
+ </head>
+ <body>
+ 	<main class="vectors">
+ 		<ul class="pokemons">
+ 			<li class="pk pk1"></li>
+ 			<li class="pk pk2"></li>
+ 			<li class="pk pk3"></li>
+ 			<li class="pk pk4"></li>
+ 			<li class="pk pk5"></li>
+ 			<li class="pk pk6"></li>
+ 			<li class="pk pk7"></li>
+ 			<li class="pk pk8"></li>
+ 		</ul>
+ 		<select id="options">
+ 			<option value="">Seleccione...</option>
+ 			<option value="1">Inicio</option>
+ 			<option value="2">Final</option>
+ 		</select>
+ 		<section class="btns">
+ 			<button id=""></button>
+ 			<button id=""></button>
+ 		</section>
+ 	</main>
+ 	<script>
+ 		//variables
+ 		var pks = document.getElementsByTagName('li');
+
+ 		for (var i=0; i <= pks.lenght; i++) {
+ 			pks[i].onclick = function() {
+ 				removeActive();
+ 				this.classList.add('active');
+ 			}
+ 		}
+
+ 		//funciones
+ 		function removeActive() {
+ 			for (var i=0; i< pks.lenght; i++) {
+ 				pks[i].classList.remove('active');
+ 			}
+ 		}
+ 	</script>
+ 	
+ </body>
+ </html> 

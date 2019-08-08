@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>metodos (vectores)</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<main>
+		<h1>metodos (vectores)</h1>
+		<ul id="vector"></ul>
+	</main>
+	<script>
+		//variables
+		var vector = document.getElementById('vector');
+		var colors = ['yellow', 'blue', 'red'];
+
+
+
+		//valueOf()
+		vector.innerHTML = "<li> <strong>Valores</strong> "+colors.valueOf()+"</li>";
+
+		//toString()
+		vector.innerHTML += "<li> <strong>Cadena</strong> "+colors.toString()+"</li>";
+
+		//join()
+		vector.innerHTML += "<li> <strong>Unir:</strong> "+colors.join('//')+"</li>";
+
+		//sort()
+		vector.innerHTML += "<li> <strong>Ordenar:</strong> "+colors.sort()+"</li>";
+
+		//reverse()
+		colors = ['yellow', 'blue', 'red'];
+		vector.innerHTML += "<li> <strong>Invetir:</strong> "+colors.reverse()+"</li>";
+
+		//unshift() - add First
+		colors.unshift('green');
+		vector.innerHTML += "<li> <strong>Adicionar al inicio:</strong> "+colors.valueOf()+"</li>";
+
+		//push() - add Last
+		colors.push('white');
+		vector.innerHTML += "<li> <strong>Adicionar al final:</strong> "+colors.valueOf()+"</li>";
+
+		//shift() - remove First
+		colors.shift('');
+		vector.innerHTML += "<li> <strong>eliminar inicio:</strong> "+colors.valueOf()+"</li>";
+
+		//pop() - remove Last
+		colors.pop('');
+		vector.innerHTML += "<li> <strong>eliminar Final:</strong> "+colors.valueOf()+"</li>";
+
+
+
+
+	</script>
+	
+</body>
+</html>
