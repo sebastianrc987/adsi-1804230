@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reto (eventos tiempo)</title>
+	<style>
+			h1 {
+				font-size: 3em;
+				text-align: center;
+				color: #34bde9;
+			}
+			main.game {
+				margin: 20px auto;
+				width: 820px;
+			}
+			header {
+				background: url(imgs/game/inicio.png)no-repeat center;
+				background-size: contain;
+				height: 65px;
+			}
+			main.game aside {
+				height: 610px;
+				display: inline-block;
+			}
+			main.game aside.left {
+				width: 220px;
+			}
+			/*aside.right*/
+			main.game aside.right {
+				margin-left: -5px;
+				width: 600px;
+			}
+			main.game aside.right section.table {
+				background: url(imgs/game/tabla.png)no-repeat center;
+				background-size: contain;
+				position: relative;
+				height: 600px;
+				margin: 0px;
+			}
+			/*aside.left*/
+			aside.left section {
+				margin-top: 24px;
+			}
+			aside.left section.info {
+				background: url(imgs/game/info.png)no-repeat center;
+				background-size:contain;
+				width: 200px;
+				height: 200px;
+				position: relative;
+				margin: 0px;
+			}
+			aside.left section.info div {
+				position: absolute;
+				font: 1.5em arial;
+				color: #555;
+				right: 36px;
+			}
+			aside.left section.info div#time {top: 34px;}
+			aside.left section.info div#score {top: 134px;}
+			aside.left section.bestscores {
+				background: url(imgs/game/users.png)no-repeat center;
+				background-size: contain;
+				height: 216px;
+				position: relative;
+				width: 282px;
+				left: -26px;
+			}
+			aside.left section.bestscores ul.list {
+				margin: 0px;
+				list-style: none;
+				padding: 0px;
+				position: absolute;
+				top: 63px;
+				left: 55px;
+				width: 170px;
+			}
+			aside.left section.bestscores ul.list li {
+				margin: 0px 0px 15px 0px;
+				font: 1em arial;
+				color: #9bc6b6;
+				text-transform: uppercase;
+			}
+			section.table div#pig {
+			background: url(imgs/game/pig.png)no-repeat center;
+			background-size:contain;
+			height: 100px;
+			position: absolute;
+			top: 0px; left: 0px;
+			width: 100px;
+		}
+		</style>
+</head>
+<body>
+	<main class="game">
+		<h1>RETO (EVENTOS TIEMPO)</h1>
+		<header></header>
+		<aside class="left">
+			<section class="info">
+				<div id="time">45</div>
+				<div id="score">78</div>
+			</section>
+			<section class="bestscores">
+				<ul class="list">
+					<li>sebas</li>
+					<li>segio</li>
+					<li>martin</li>
+					<li>leonidas</li>
+					<li>mateo</li>
+				</ul>
+			</section>
+		</aside>
+		<aside class="right">
+			<section class="table">
+				<div id="pig"></div>
+			</section>
+		</aside>
+	</main>
+	<script>
+		// Variables
+		var pig = document.getElementById('pig');
+		var ps = [0, 100, 200, 300, 400, 500];
+		pig.style.top  = randomPosition()+"px";
+		pig.style.left = randomPosition()+"px";
+
+
+		// Funciones
+		function randomPosition() {
+			var rnd = Math.round(Math.random()*ps.length);
+			return ps[rnd];
+		}
+	</script>
+</body>
+</html>
