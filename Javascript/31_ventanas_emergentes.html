@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ventanas (emergentes)</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<main>
+		<h1>Ventanas (Emergentes)</h1>
+		<h3 id="answer"></h3>
+	</main>
+	<script>
+		//variables
+		var answer = document.getElementById('answer');
+		if(confirm('Usted desea responder una pregunta')) {
+			var ans = prompt('cuanto es 3 elevado a la 2');
+			if(ans == 9) {
+				answer.innerHTML = "Respuesta Correcta";
+
+			} else {
+				answer.innerHTML = "Respuesta Incorrecta";
+			}
+		} else {
+			alert('Muchas Gracias');
+		}
+	</script>
+</body>
+</html>

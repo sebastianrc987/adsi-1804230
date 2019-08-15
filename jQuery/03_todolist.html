@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODO list</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		input, button.add {
+			background-color: #fff;
+			border: 1px solid #4f5c6e;
+			border-radius: 15px;
+			color: #4f5c6e;
+			outline: none;
+			padding: 20px;
+
+		}
+		input {
+			width: 400px;
+		}
+		button.add {
+			cursor: pointer;
+			width: 120px;
+		}
+		li {
+			background-color: #fefab6;
+			border-radius: 
+			list-style: none;
+			padding: 6px;
+			position: relative;
+			margin: 4px 0px;
+		}
+		li button {
+			border: none;
+			position: absolute;
+			right: 0px;
+		}
+		li button.done {
+			background-color: #63ab66;
+			color: #fff;
+			right: 60px;
+		}
+		li button.delete {
+			background-color: #bf5257;
+		}
+
+		.active {
+			background-color: lime;
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>TODO list</h1>
+		<input type="text" placeholder="Task">
+		<button class="add"> Add </button>
+	</main>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js">
+		$(document).ready(function(){
+			$('button.add').click(function(event){
+				$(this).after('<li>'+$(input).val()+'<button class="done">&done</button><button class="delete">&times</button> </li>');
+				$('input').val('');
+			});
+			$('main').on('click','.delete', function(event){
+				event.preventDefault();
+				$(this).parent().remove();
+			});
+			//.done
+			$('main').on('click','.done', function(event){
+				event.preventDefault();
+				$(this).parent().toggleClass('active');
+			});
+		});
+	</script>
+</body>
+</html>
