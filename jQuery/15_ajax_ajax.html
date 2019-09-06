@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX (METODO AJAX)</title>
+	<style>
+		ul.games {
+			list-style: none;
+			padding: 0px;
+			margin: 0px auto;
+			width: 300px;
+		}
+		ul.games li {
+			padding: 4px;
+			border-bottom:1px solid gray;
+		}
+		button.btn-load {
+			background-color: #fff;
+			border: 1px solid gray;
+			color: gray;
+			display: block;
+			margin: 40px auto;
+			padding: 10px;
+			width: 150px;
+		}
+		button.btn-load:hover {
+			background-color: gray;
+			color: #fff;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>AJAX (METODO AJAX)</h1>
+		<ul class="games">
+			<li>rambo III</li>
+			<li>doble dragon 8</li>
+			<li>nintendo 64</li>
+		</ul>
+		<button class="btn-load">cargar lista de juegos</button>
+	</main>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('btn-load').click(function(event) {
+				//ajax
+				$.ajax({
+					url: 'json/games.json',
+					dataType: 'json',
+					data: {param1: 'value1'},
+				})
+				.done(function() {
+					$('.games').html('');
+					$.each(data, function(index, val) {
+						$('.games').append('<li>'+val['name']+'-('+val['year']+')</li>');
+					});
+					console.log("success");
+				})
+				.fail(function() {
+					console.log("error");
+				})
+				.always(function() {
+					console.log("complete");
+				});
+				
+			});
+		});
+	</script>
+</body>
+</html>

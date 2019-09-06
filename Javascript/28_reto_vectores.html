@@ -50,14 +50,12 @@
  		ul.pokemons li.pk6 {background-image: url(imgs/pokemon/pk6.png);}
  		ul.pokemons li.pk7 {background-image: url(imgs/pokemon/pk7.png);}
  		ul.pokemons li.pk8 {background-image: url(imgs/pokemon/pk8.png);}
-
-
- 		ul.pokemons li.pk:hover {
- 			cursor: pointer;
- 			filter: grayscale(0);
- 			transform: scale(1.2);
-
- 		}
+ 		ul.pokemons li.pk:hover,
+		ul.pokemons li.pk.active{
+			cursor: pointer;
+			filter: grayscale(0);
+			transform: scale(1.1);
+		}
  		select#options {
  			background: url(imgs/pokemon/seleccione.png)no-repeat center;
  			border:none;
@@ -70,7 +68,6 @@
  			-webkit-appearance:none;
  			width: 400px;
  		}
-
  		section.btns {
  			position: absolute;
  			bottom: 20px;
@@ -88,31 +85,35 @@
  		section.btns button#btnAdd {
  			background-image: url(imgs/pokemon/adicionar.png);
  			margin-right: 30px;
+ 			padding: 25px;
+			margin-left:   20px;
+			background-size: contain;
+			outline: none;
  		}
  		section.btns button#btnDelete {
  			background-image: url(imgs/pokemon/delete.png);
+ 			padding: 25px;
+			margin-left: -35px;
+			background-size: contain;
+			outline: none;
  		}
  		section.btns button:hover {
  			cursor: pointer;
  			transform: scale(1);
  		}
-
-
-
-		
  	</style>
  </head>
  <body>
  	<main class="vectors">
  		<ul class="pokemons">
- 			<li class="pk pk1"></li>
- 			<li class="pk pk2"></li>
- 			<li class="pk pk3"></li>
- 			<li class="pk pk4"></li>
- 			<li class="pk pk5"></li>
- 			<li class="pk pk6"></li>
- 			<li class="pk pk7"></li>
- 			<li class="pk pk8"></li>
+ 			<li class="pk pk1" id="1"></li>
+ 			<li class="pk pk2" id="2"></li>
+ 			<li class="pk pk3" id="3"></li>
+ 			<li class="pk pk4" id="4"></li>
+ 			<li class="pk pk5" id="5"></li>
+ 			<li class="pk pk6" id="6"></li>
+ 			<li class="pk pk7" id="7"></li>
+ 			<li class="pk pk8" id="8"></li>
  		</ul>
  		<select id="options">
  			<option value="">Seleccione...</option>
@@ -120,28 +121,73 @@
  			<option value="2">Final</option>
  		</select>
  		<section class="btns">
- 			<button id="">añadir</button>
- 			<button id="">quitar</button>
+ 			<button id="btnAdd"></button>
+ 			<button id="btnDelete"></button>
  		</section>
  	</main>
+ 	<div id="div">
+	<div id="div2"></div>
+
  	<script>
- 		//variables
- 		var pks = document.getElementsByTagName('li');
-
- 		for (var i=0; i <= pks.lenght; i++) {
- 			pks[i].onclick = function() {
- 				removeActive();
- 				this.classList.add('active');
- 			}
- 		}
-
- 		//funciones
- 		function removeActive() {
- 			for (var i=0; i< pks.lenght; i++) {
- 				pks[i].classList.remove('active');
- 			}
- 		}
- 	</script>
- 	
+		var pks = document.getElementsByTagName('li');
+		var pokemons = [];
+		for(var i = 0; i < pks.length; i++) {
+			pks[i].onclick = function() {
+				removeActive();
+				this.classList.add('active');
+			}
+		}
+		//Funciones
+		function removeActive(){
+			for(var i = 0; i < pks.length; i++) {
+				pks[i].classList.remove('active');
+			}
+		}
+		btnAdd.onclick = function(){
+			var gallery="";
+			var pokemonSeleccionado = document.getElementsByClassName("active");
+			var id = pokemonSeleccionado[0].getAttribute( 'id' );
+			var opt = document.getElementById('options').value;
+			if(opt==1){
+				pokemons.unshift("imgs/pokemon/pk"+id+".png");
+				for(var i = 0;i<pokemons.length;i++){
+					var images="<img src=\'"+pokemons[i]+"\'>";
+					gallery += images;
+				}
+				document.getElementById('div2').innerHTML=gallery;
+			}
+			else if(opt==2){
+				pokemons.push("imgs/pokemon/pk"+id+".png");
+				for(var i = 0;i<pokemons.length;i++){
+					var images="<img src=\'"+pokemons[i]+"\'>";
+					gallery += images;
+				}
+				document.getElementById('div2').innerHTML=gallery;
+			}
+		}
+		btnDelete.onclick = function(){
+			var gallery="";
+			var pokemonSeleccionado = document.getElementsByClassName("active");
+			var id = pokemonSeleccionado[0].getAttribute( 'id' );
+			var opt = document.getElementById('options').value;
+			if(opt==1){
+				pokemons.shift();
+				console.log(pokemons);
+				for(var i = 0;i<pokemons.length;i++){
+					var images="<img src=\'"+pokemons[i]+"\'>";
+					gallery += images;
+				}
+				document.getElementById('div2').innerHTML=gallery;
+			}
+			else if(opt==2){
+				pokemons.pop();
+				for(var i = 0;i<pokemons.length;i++){
+					var images="<img src=\'"+pokemons[i]+"\'>";
+					gallery += images;
+				}
+				document.getElementById('div2').innerHTML=gallery;
+			}
+		}
+	</script>
  </body>
  </html> 

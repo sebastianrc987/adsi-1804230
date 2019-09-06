@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>retro (drag/drop)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		section.columns {
+			background-color: #4f5c6e;
+			margin: 20px auto;
+			width: 369px;/*realmente solo son 360*/
+		}
+		section.columns aside.column {
+			display: inline-block;
+			vertical-align: top;
+			width: 120px;
+		}
+		aside.column h4 {
+			background-color: #353d4d;
+			color: #fff;
+			padding: 10px;
+			margin: 0px;
+
+		}
+		aside.column:nth-child(1) h4 {
+			border-bottom: 4px solid lime;
+		}
+		aside.column:nth-child(2) h4 {
+			border-bottom: 4px solid orange;
+		}
+		aside.column:nth-child(3) h4 {
+			border-bottom: 4px solid red;
+		}
+		aside.column div {
+			background-color: #383838;
+			height: 450px;
+		}
+		aside.column div.pk {
+			height: 150px;
+			width: 120px;
+		}
+		/*-------------------------------------------------------------------*/
+		/*pokemones evolucion 1*/
+		aside.column div.pk.pk11 {
+			background: url(imgs/pokemons/pk11.png)no-repeat center;
+		}
+		aside.column div.pk.pk21 {
+			background: url(imgs/pokemons/pk21.png)no-repeat center;
+		}
+		aside.column div.pk.pk31 {
+			background: url(imgs/pokemons/pk31.png)no-repeat center;
+		}
+		/*-------------------------------------------------------------------*/
+		/*pokemones evolucion 2*/
+		aside.column div.pk.pk12 {
+			background: url(imgs/pokemons/pk11.png)no-repeat center;
+		}
+		aside.column div.pk.pk22 {
+			background: url(imgs/pokemons/pk21.png)no-repeat center;
+		}
+		aside.column div.pk.pk32 {
+			background: url(imgs/pokemons/pk31.png)no-repeat center;
+		}
+		/*-------------------------------------------------------------------*/
+		/*pokemones evolucion 3*/
+		aside.column div.pk.pk13 {
+			background: url(imgs/pokemons/pk11.png)no-repeat center;
+		}
+		aside.column div.pk.pk23 {
+			background: url(imgs/pokemons/pk21.png)no-repeat center;
+		}
+		aside.column div.pk.pk33 {
+			background: url(imgs/pokemons/pk31.png)no-repeat center;
+		}
+		/*-------------------------------------------------------------------*/
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Retro (Drag/Drop)</h1>
+		<section class="columns">
+			<aside class="column">
+				<h4>Evolucion_1</h4>
+				<div class="stage stage1">
+					<div class="pk pk11"></div>
+					<div class="pk pk21"></div>
+					<div class="pk pk31"></div>
+				</div>
+			</aside>
+			<aside class="column">
+				<h4>Evolucion_2</h4>
+				<div class="stage stage2"></div>
+
+			</aside>
+			<aside class="column">
+				<h4>Evolucion_3</h4>
+				<div class="stage stage3"></div>
+
+			</aside>
+		</section>
+	</main>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.pk').draggable({
+				containment: '.columns',
+				cursor: 'move',
+				snap: '.stage',
+				snapMode: 'inner',
+				revert: 'invalid'
+			});
+		});
+
+
+
+
+
+		$('div.stage2').droppable({
+			accept: '.pk11',
+			snapMode: 'inner',
+			drop: function(evt, ui){
+				$drag = $(ui.draggable);
+				$drop = $(this);
+				$drop.fadeOut(1000);
+				$drag.addClass('animated bounce');
+			}
+		});
+		
+	</script>
+
+
+</body>
+</html>

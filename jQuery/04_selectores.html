@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SELECTORES</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		button {
+			cursor: pointer;
+			display: block;
+			font-size: 2em;
+			padding: 20px;
+			margin: 0px auto;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>SELECTORES</h1>
+		<button>CONTAR</button>
+	</main>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$cont = 0;
+			$('button').click(funtion(event) {
+				$(this).text('contar'+$cont++);
+			});
+		});
+	</script>
+</body>
+</html>
