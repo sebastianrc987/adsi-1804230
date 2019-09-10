@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>retro (drag/drop)</title>
+	<title>Reto (Grag/Drop)</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<style>
 		section.columns {
 			background-color: #4f5c6e;
 			margin: 20px auto;
-			width: 369px;/*realmente solo son 360*/
+			width: 370px;
 		}
 		section.columns aside.column {
 			display: inline-block;
@@ -18,90 +17,85 @@
 			width: 120px;
 		}
 		aside.column h4 {
-			background-color: #353d4d;
+			background-color: #353d4b;
 			color: #fff;
-			padding: 10px;
+			padding: 10px
 			margin: 0px;
-
 		}
 		aside.column:nth-child(1) h4 {
-			border-bottom: 4px solid lime;
+			border-bottom: 4px solid #35f442;
 		}
 		aside.column:nth-child(2) h4 {
-			border-bottom: 4px solid orange;
+			border-bottom: 4px solid #f78a14;
 		}
 		aside.column:nth-child(3) h4 {
-			border-bottom: 4px solid red;
+			border-bottom: 4px solid #ff232f;
 		}
 		aside.column div {
-			background-color: #383838;
+			background-color: #373737;
 			height: 450px;
 		}
 		aside.column div.pk {
 			height: 150px;
+			position: relative;
 			width: 120px;
 		}
-		/*-------------------------------------------------------------------*/
-		/*pokemones evolucion 1*/
 		aside.column div.pk.pk11 {
-			background: url(imgs/pokemons/pk11.png)no-repeat center;
+			background: url(imgs/pokemons/pk11.png) no-repeat center;
 		}
 		aside.column div.pk.pk21 {
-			background: url(imgs/pokemons/pk21.png)no-repeat center;
+			background: url(imgs/pokemons/pk21.png) no-repeat center;
 		}
 		aside.column div.pk.pk31 {
-			background: url(imgs/pokemons/pk31.png)no-repeat center;
+			background: url(imgs/pokemons/pk31.png) no-repeat center;
 		}
-		/*-------------------------------------------------------------------*/
-		/*pokemones evolucion 2*/
+		/*------------------------------------------------------*/
 		aside.column div.pk.pk12 {
-			background: url(imgs/pokemons/pk11.png)no-repeat center;
+			background: url(imgs/pokemons/pk12.png) no-repeat center;
 		}
 		aside.column div.pk.pk22 {
-			background: url(imgs/pokemons/pk21.png)no-repeat center;
+			background: url(imgs/pokemons/pk22.png) no-repeat center;
 		}
 		aside.column div.pk.pk32 {
-			background: url(imgs/pokemons/pk31.png)no-repeat center;
+			background: url(imgs/pokemons/pk32.png) no-repeat center;
+
 		}
-		/*-------------------------------------------------------------------*/
-		/*pokemones evolucion 3*/
+    	/*------------------------------------------------------*/
 		aside.column div.pk.pk13 {
-			background: url(imgs/pokemons/pk11.png)no-repeat center;
+			background: url(imgs/pokemons/pk13.png) no-repeat center;
 		}
 		aside.column div.pk.pk23 {
-			background: url(imgs/pokemons/pk21.png)no-repeat center;
+			background: url(imgs/pokemons/pk23.png) no-repeat center;
 		}
 		aside.column div.pk.pk33 {
-			background: url(imgs/pokemons/pk31.png)no-repeat center;
+			background: url(imgs/pokemons/pk33.png) no-repeat center;
 		}
-		/*-------------------------------------------------------------------*/
 	</style>
 </head>
 <body>
 	<main>
-		<h1>Retro (Drag/Drop)</h1>
+		<h1>Reto (Grag/Drop)</h1>
 		<section class="columns">
 			<aside class="column">
-				<h4>Evolucion_1</h4>
+				<h4>Evolucion 1</h4>
 				<div class="stage stage1">
-					<div class="pk pk11"></div>
-					<div class="pk pk21"></div>
-					<div class="pk pk31"></div>
+					<div class="pk pk11" data-evolucion="1" data-pk="1"></div>
+					<div class="pk pk21" data-evolucion="1" data-pk="2"></div>
+					<div class="pk pk31" data-evolucion="1" data-pk="3"></div>
 				</div>
 			</aside>
 			<aside class="column">
-				<h4>Evolucion_2</h4>
+				<h4>Evolucion 2</h4>
 				<div class="stage stage2"></div>
-
 			</aside>
 			<aside class="column">
-				<h4>Evolucion_3</h4>
+				<h4>Evolucion 3</h4>
 				<div class="stage stage3"></div>
-
 			</aside>
+
 		</section>
 	</main>
-	<script src="js/jquery.js"></script>
+	<script src="js/jquery-3.4.1.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script>
 		$(document).ready(function() {
@@ -112,25 +106,47 @@
 				snapMode: 'inner',
 				revert: 'invalid'
 			});
-		});
 
-
-
-
-
-		$('div.stage2').droppable({
-			accept: '.pk11',
-			snapMode: 'inner',
-			drop: function(evt, ui){
+ 		 $('div.stage2').droppable({
+				drop: function(evt, ui){
 				$drag = $(ui.draggable);
-				$drop = $(this);
-				$drop.fadeOut(1000);
-				$drag.addClass('animated bounce');
-			}
-		});
-		
+				var pokemon = $drag.data('pk');
+				var evolucion = $drag.data('evolucion');
+
+				$drag.removeClass('pk'+pokemon+evolucion);
+				$drag.addClass('pk'+pokemon+2);
+				$drag.data('evolucion',2)
+				
+				}
+			});
+
+	 $('div.stage3').droppable({
+				drop: function(evt, ui){
+				$drag = $(ui.draggable);
+				var pokemon = $drag.data('pk');
+				var evolucion = $drag.data('evolucion');
+
+				$drag.removeClass('pk'+pokemon+evolucion);
+				$drag.addClass('pk'+pokemon+3);
+				$drag.data('evolucion',3)
+				
+				}
+			});	
+			 $('div.stage1').droppable({
+				drop: function(evt, ui){
+					$drag = $(ui.draggable);
+					var pokemon = $drag.data('pk');
+					var evolucion = $drag.data('evolucion');
+
+					$drag.removeClass('pk'+pokemon+evolucion);
+					$drag.addClass('pk'+pokemon+1);
+					$drag.data('evolucion',1)
+				}
+			});
+
+ 		
+});
 	</script>
-
-
 </body>
+	
 </html>
