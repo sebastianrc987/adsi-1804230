@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>carousel slider (jquary)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.owl.theme.default.min.css">
+	<style>
+		main {
+			width: 1024px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>carousel slider (jquary)</h1>
+		<section>
+			<img src="imgs/nature1.jpg" alt="">
+			<img src="imgs/nature2.jpg" alt="">
+			<img src="imgs/nature3.jpg" alt="">
+			<img src="imgs/nature4.jpg" alt="">
+			<img src="imgs/nature5.jpg" alt="">
+
+			
+
+			</section>
+	</main>
+	<script src="js/jquery.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+				nav: true
+			});
+		});
+	</script>
+</body>
+</html>
