@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<title>alineacion de columnas horizontalmente</title>
+	<style>
+		.row{
+			background: #e0b0b0;
+			height: 150px;
+			margin-top:20px; 
+		}
+		.columna{
+			background: black;
+			text-align: center;
+			padding: 10px;
+			border: 1px solid red;
+		}
+		div{
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="columna col-2 flex-last">Columna #1</div>
+			<div class="columna col-2 flex-unordered">Columna #2</div>
+			<div class="columna col-2 flex-first">Columna #3</div>
+			<div class="columna col-2 flex-first">Columna #4</div>
+			<div class="columna col-2 flex">Columna #5</div>
+		</div>
+	</div>
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery/jquery-3.4.1.min.js"></script>
+</body>
+</html>
