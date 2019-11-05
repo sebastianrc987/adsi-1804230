@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<title>Scrollspy</title>
+	<style>
+		.scroll1 a{
+			color: #fff;
+			padding: 15px;
+		}
+		.scroll1 .active, .scroll1 a:hover{
+			background: rgba(255, 255, 255,.1);
+		}
+		.seccion{
+			margin-bottom: 1000px;
+		}
+		.seccion .columna{
+			padding-top: 100px; 
+		}
+	</style>
+</head>
+<body data-spy="scroll" data-target="#scroll">
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col">
+				<div id="scroll1">
+					<ul class="scroll1 nav fixed-top bg-primary">
+						<li class="nav-item">
+							<a href="#seccion1" class="nav-link">Seccion #1</a>
+						</li>
+						<li class="nav-item">
+							<a href="#seccion1" class="nav-link">Seccion #2</a>
+						</li>
+						<li class="nav-item">
+							<a href="#seccion1" class="nav-link">Seccion #3</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row seccion" id="seccion1">
+			<div class="col-12 columna">
+				<h2>seccion 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis pariatur recusandae architecto, nihil non nesciunt tempora unde commodi soluta maxime debitis quibusdam repellendus minus eveniet, ullam consequatur itaque error, explicabo cupiditate impedit obcaecati aliquid reiciendis mollitia excepturi. Quo excepturi molestias at commodi, pariatur hic saepe veniam a non corporis nulla harum, est recusandae delectus magni ipsa omnis sed suscipit distinctio!</p>
+			</div>
+		</div>
+		<div class="row seccion" id="seccion2">
+			<div class="col-12 columna">
+				<h2>seccion 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis pariatur recusandae architecto, nihil non nesciunt tempora unde commodi soluta maxime debitis quibusdam repellendus minus eveniet, ullam consequatur itaque error, explicabo cupiditate impedit obcaecati aliquid reiciendis mollitia excepturi. Quo excepturi molestias at commodi, pariatur hic saepe veniam a non corporis nulla harum, est recusandae delectus magni ipsa omnis sed suscipit distinctio!</p>
+			</div>
+		</div>
+		<div class="row seccion" id="seccion3">
+			<div class="col-12 columna">
+				<h2>seccion 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis pariatur recusandae architecto, nihil non nesciunt tempora unde commodi soluta maxime debitis quibusdam repellendus minus eveniet, ullam consequatur itaque error, explicabo cupiditate impedit obcaecati aliquid reiciendis mollitia excepturi. Quo excepturi molestias at commodi, pariatur hic saepe veniam a non corporis nulla harum, est recusandae delectus magni ipsa omnis sed suscipit distinctio!</p>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery/jquery-3.4.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
